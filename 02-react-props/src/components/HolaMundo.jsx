@@ -1,8 +1,8 @@
-const HolaMundo = ({saludo, nombre}) => {
+const HolaMundo = ({ saludo, nombre }) => {
   return (
     <>
-        <h1>{saludo}</h1>
-        <p>{nombre}</p>
+      <h1>{saludo}</h1>
+      <p>{nombre}</p>
     </>
   )
 }
