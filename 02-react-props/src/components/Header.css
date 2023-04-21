@@ -1,0 +1,45 @@
+.hero{
+    background-image: linear-gradient(120deg, rgba(241, 147, 251, 0.699) 0%, rgba(85, 27, 35, 0.692) 100%), url("../assets/img/header.jpg");
+    width: 100%;
+    height: 650px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .textos-hero{
+    height: 500px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .textos-hero h1{
+    font-size: 60px;
+  }
+  
+  .textos-hero p{
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+  
+  .textos-hero a{
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 15px;
+    background: #a18cd1;
+    border-radius: 8px;
+    color: #fff;
+  }
+  
+  .svg-hero{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }

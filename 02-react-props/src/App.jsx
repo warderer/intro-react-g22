@@ -8,29 +8,12 @@ import tres from './assets/img/tres.jpg'
 import cuatro from './assets/img/cuatro.jpg'
 import cinco from './assets/img/cinco.jpg'
 import seis from './assets/img/seis.jpg'
+import Header from './components/Header'
 
 function App () {
   return (
     <>
-      <header className='hero'>
-        <div className='textos-hero'>
-          <h1>Bienvenido a Website</h1>
-          <p>Creamos el mejor sitio web para ti</p>
-          <a href='#contacto'>Contactame</a>
-        </div>
-        <div className='svg-hero' style={{ height: '150px', overflow: 'hidden' }}>
-          <svg
-            viewBox='0 0 500 150' preserveAspectRatio='none'
-            style={{ height: '100%', width: '100%' }}
-          >
-            <path
-              d='M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z'
-              style={{ stroke: 'none', fill: '#fff' }}
-            />
-          </svg>
-        </div>
-      </header>
-
+      <Header title='Hola G22' subtitle='¡Esto es React!' buttonText='Click me' />
       <section className='wave-contenedor website'>
         <img src={ilustracion1} alt='' />
         <div className='contenedor-textos-main'>
