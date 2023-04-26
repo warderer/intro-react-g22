@@ -1,4 +1,5 @@
 import './Header.css'
+import PropTypes from 'prop-types'
 
 const Header = ({ title, subtitle, buttonText }) => {
   return (
@@ -21,5 +22,11 @@ const Header = ({ title, subtitle, buttonText }) => {
       </div>
     </header>
   )
+}
+
+Header.propTypes = {
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
+  buttonText: PropTypes.string.isRequired
 }
 export default Header
