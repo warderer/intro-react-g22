@@ -1,5 +1,7 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from 'react'
 import './App.css'
+import ImageCard from './components/ImageCard'
 
 function App () {
   const [gifs, setGifs] = useState([])
@@ -18,7 +20,17 @@ function App () {
   return (
     <>
       <div>
-        <h1>Giphy App</h1>
+        <h1 className='title'>Giphy App</h1>
+        <div className='grid-cards'>
+          {
+            gifs.map(gif => (
+              <ImageCard
+                key={gif.id}
+                title={gif.title}
+                url={gif.images.fixed_height.url}/>
+            ))
+          }
+        </div>
       </div>
 
     </>

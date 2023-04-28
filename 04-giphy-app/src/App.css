@@ -75,3 +75,7 @@ img {
 .search-button:focus{
   outline: none;
 }
+
+.title {
+  color:white;
+}
