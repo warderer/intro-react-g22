@@ -15,6 +15,10 @@ const Home = () => {
     setSearchTerm(event.target.value)
   }
 
+  const filteredPokemons = pokemons.filter(pokemon => {
+    return pokemon.name.toLowerCase().includes(searchTerm.toLowerCase())
+  })
+
   return (
     <div className='container'>
       <h1>Home</h1>
@@ -32,7 +36,7 @@ const Home = () => {
 
       <div className='row'>
         {
-            pokemons.map(pokemon => (
+            filteredPokemons.map(pokemon => (
               <div className='col-sm-4 mb-4' key={pokemon.name}>
                 <div className='card'>
                   <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.url.split('/')[6]}.png`} className='card-img-top' alt={pokemon.name} />
