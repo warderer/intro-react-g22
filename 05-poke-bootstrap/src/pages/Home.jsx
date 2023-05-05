@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 
 const Home = () => {
   const [pokemons, setPokemons] = useState([]) // Lista de Pokémons
+  const [searchTerm, setSearchTerm] = useState('') // Palabra a buscar
 
   useEffect(() => {
     fetch('https://pokeapi.co/api/v2/pokemon?limit=151')
@@ -10,9 +11,25 @@ const Home = () => {
       .catch(error => console.error(error))
   }, [])
 
+  const handleSearch = (event) => {
+    setSearchTerm(event.target.value)
+  }
+
   return (
     <div className='container'>
       <h1>Home</h1>
+
+      <form className='form-inline my-2 w-100'>
+        <input
+          type='text'
+          className='form-control'
+          placeholder='¿Qué Pokémon quieres buscar?'
+          id='search'
+          value={searchTerm}
+          onChange={handleSearch}
+        />
+      </form>
+
       <div className='row'>
         {
             pokemons.map(pokemon => (
