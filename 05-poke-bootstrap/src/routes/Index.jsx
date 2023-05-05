@@ -8,7 +8,7 @@ const RoutesIndex = () => {
     <Routes>
       <Route path='/' element={<Home />} />
       <Route path='/about' element={<About />} />
-      <Route path='/pokemon' element={<PokemonDetail />} />
+      <Route path='/pokemon/:id' element={<PokemonDetail />} />
     </Routes>
   )
 }
